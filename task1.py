@@ -73,3 +73,13 @@ Buster dog
 Shih-tzu is owned by Christy
 (10 points) 
 """
+
+class AnimalSort:
+    typeofanimal = ""
+    breed = ""
+    name = ""
+    owner = ""
+    birthdate = ""
+
+    def __init__(self):
+        self.typeofanimal = ""
