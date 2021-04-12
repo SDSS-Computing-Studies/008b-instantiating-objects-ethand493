@@ -82,4 +82,29 @@ class AnimalSort:
     birthdate = ""
 
     def __init__(self):
-        self.typeofanimal = ""
+        self.typeofanimal = input("Type of animal? ")
+        self.breed = input("Breed? ")
+        self.name = input("Name? ")
+        self.owner = input("Owner? ")
+        self.birthdate = input("Birthdate? ")
+
+def Command():
+    customers = []
+
+    while True:
+        print("1. Enter a new pet")
+        print("2. Retrieve a pet")
+        print("3. Exit")
+        command = input("Choose a number (1-3)")
+        if int(command) == 1:
+            customers.append(AnimalSort())
+        elif int(command) == 2:
+            x = input("Which pet?")
+            for i in customers:
+                if str(i.name) == str(x):
+                    print(i.name + "\n" + i.breed + " is owned by " + i.owner)
+        elif int(command) == 3:
+            break
+    exit()
+
+Command()
